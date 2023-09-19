@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const file = process.argv[1];
+const file = process.argv[2];
 const fs = require('fs');
 fs.readFile(file, 'utf-8', (error, data) => {
   if (error) {
