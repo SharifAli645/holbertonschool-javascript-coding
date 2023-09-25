@@ -10,4 +10,3 @@ reader.on('error', (error) => {
 reader.on('data', (data) => {
   console.log(data);
 });
-
