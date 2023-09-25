@@ -18,4 +18,4 @@ request(api, (error, response, body) => {
     idx++;
   }
   console.log(cnt);
-}); 
+});
