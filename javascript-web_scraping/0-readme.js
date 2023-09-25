@@ -5,11 +5,9 @@ const reader = fs.createReadStream(file, 'utf-8');
 
 reader.on('error', (error) => {
   console.error(error);
-  }
-);
+});
 
-reader.on('data', (data)=> {
+reader.on('data', (data) => {
   console.log(data);
-  }
-);
+});
 
