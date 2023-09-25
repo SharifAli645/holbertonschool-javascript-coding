@@ -1,11 +1,14 @@
 #!/usr/bin/node
 const file = process.argv[2];
 const fs = require('fs');
-fs.readFile(file, 'utf-8', (error, data) => {
-  if (error) {
-    console.error(error);
-    return;
-  }
-  console.log(data);
-});
+const reader = fs.createReadStream(file, 'utf-8');
 
+reader.on('error', (error) => {
+  console.error(error);
+  }
+);
+
+reader.on('data', (data)=> {
+  console.log(data);
+  }
+);
