@@ -1,18 +1,19 @@
+/* eslint-disable */
 function countStudents(path) {
-  const fs = require('fs');
-  let data = '';
+  const fs = require("fs");
+  let data = "";
 
   try {
-    data = fs.readFileSync(path, 'utf8');
+    data = fs.readFileSync(path, "utf8");
   } catch (err) {
-    throw new Error('Cannot load the database');
+    throw new Error("Cannot load the database");
   }
-  const lines = data.split('\n');
+  const lines = data.split("\n");
   const lista = [];
-  const nonEmptyLines = lines.filter((line) => line.trim() !== '');
+  const nonEmptyLines = lines.filter((line) => line.trim() !== "");
   nonEmptyLines.splice(0, 1);
 
-  const mapeo = nonEmptyLines.map((ele) => ele.split(','));
+  const mapeo = nonEmptyLines.map((ele) => ele.split(","));
   const len = mapeo.length;
   console.log(`Number of students: ${len}`);
 
