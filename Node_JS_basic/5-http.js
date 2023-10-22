@@ -6,12 +6,11 @@ const port = 1245;
 /* eslint-disable */
 const app = http.createServer((req, res) => {
   const url = req.url;
-
-  if (url === '/') {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello Holberton School!');
-  } else if (url === '/students') {
-    res.write('This is the list of our students\n');
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  if (url === "/") {
+    res.end("Hello Holberton School!");
+  } else if (url === "/students") {
+    res.write("This is the list of our students\n");
     countStudents(process.argv[2])
       .then((mapeo) => {
         const len = mapeo.length;
