@@ -1,4 +1,4 @@
-function countStudents (path) {
+function countStudents(path) {
   const fs = require('fs');
   let data = '';
 
@@ -12,9 +12,7 @@ function countStudents (path) {
   const nonEmptyLines = lines.filter((line) => line.trim() !== '');
   nonEmptyLines.splice(0, 1);
 
-  const mapeo = nonEmptyLines.map((ele) => {
-    return ele.split(',');
-  });
+  const mapeo = nonEmptyLines.map((ele) => ele.split(','));
   const len = mapeo.length;
   console.log(`Number of students: ${len}`);
 
