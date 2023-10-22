@@ -7,8 +7,6 @@ function countStudents(path) {
         if (error) {
           console.log(error);
         } else {
-          
-
           const lines = data.split("\n");
           const lista = [];
           const nonEmptyLines = lines.filter((line) => line.trim() !== "");
@@ -31,6 +29,7 @@ function countStudents(path) {
               `Number of students in ${ele}: ${personaje.length}. List:${cadena}`
             );
           }
+          resolve(lines);
         }
       });
     } else {
