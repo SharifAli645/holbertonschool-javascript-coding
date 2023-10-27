@@ -33,7 +33,7 @@ const app = http.createServer((req, res) => {
         res.end();
       })
       .catch((error) => {
-        res.end(error);
+        res.end(error.message);
       });
   }
 });
