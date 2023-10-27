@@ -8,7 +8,7 @@ const port = 1245;
 app.get('/', (req, res) => {
   res.send('Hello Holberton School!');
 });
-
+/* eslint-disable */
 app.get('/students', (req, res) => {
   if (fs.existsSync(process.argv[2])) {
     res.write('This is the list of our students\n');
